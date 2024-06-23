@@ -25,8 +25,8 @@ export default function Add() {
 
         const name =user;//'test';// e.target[0].value;
         const message =body;//'test message';// e.target[1].value;
-
-        axios.post("https://mdsexp.azurewebsites.net/api", { name, message })//https://mango-sky-000567500.5.azurestaticapps.net
+        const tpe='chat';
+        axios.post("https://mdsexp.azurewebsites.net/api", { name, message,tpe })//https://mango-sky-000567500.5.azurestaticapps.net
             .then((res) => {
                 console.log(res)
             })
