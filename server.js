@@ -40,6 +40,9 @@ http.listen(PORT, () => {
 });
 */
 
+
+/* doesnt run on server
+
 const express = require("express");
 const app = express();
 const PORT = 8080;
@@ -66,12 +69,12 @@ const socketIO = require('socket.io')(http, {
         res.end();
     }
     ,
-   /*  cors: {
-       origin: ["*","http://localhost:3000/","https://white-field-099b39e10.5.azurestaticapps.net/"]
-    }*/
+ // cors: {
+   //    origin: ["*","http://localhost:3000/","https://white-field-099b39e10.5.azurestaticapps.net/"]
+    //}
    
    cors: {
-        origin:  ["*","http://localhost:3000/","https://mango-sky-000567500.5.azurestaticapps.net/"],
+        origin:  ["http://localhost:3000/","https://white-field-099b39e10.5.azurestaticapps.net/","https://mango-sky-000567500.5.azurestaticapps.net/"],
         methods: ["GET", "POST"],
         withCredentials: true,
   extraHeaders: {
@@ -93,7 +96,7 @@ socketIO.on('connection', (socket) => {
 });
 
 let corsOptions = {
-   origin:['*','http://localhost:3000','https://mango-sky-000567500.5.azurestaticapps.net']//[ 'https://white-field-099b39e10.5.azurestaticapps.net', 'http://localhost:3000','*' ]
+   origin:['*','http://localhost:3000','https://white-field-099b39e10.5.azurestaticapps.net/','https://mango-sky-000567500.5.azurestaticapps.net']//[ 'https://white-field-099b39e10.5.azurestaticapps.net', 'http://localhost:3000','*' ]
 };
 app.get('/', cors(corsOptions),
     (req, res) => {res.json('Hello from server');
@@ -112,3 +115,5 @@ app.post("/api",cors(corsOptions),
 http.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
+
+*/
