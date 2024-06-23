@@ -71,7 +71,7 @@ const socketIO = require('socket.io')(http, {
     }*/
    
    cors: {
-        origin:  ["*","http://localhost:3000/","https://white-field-099b39e10.5.azurestaticapps.net/"],
+        origin:  ["*","http://localhost:3000/","https://mango-sky-000567500.5.azurestaticapps.net/"],
         methods: ["GET", "POST"],
         withCredentials: true,
   extraHeaders: {
@@ -93,7 +93,7 @@ socketIO.on('connection', (socket) => {
 });
 
 let corsOptions = {
-   origin:['*','http://localhost:3000','https://white-field-099b39e10.5.azurestaticapps.net']//[ 'https://white-field-099b39e10.5.azurestaticapps.net', 'http://localhost:3000','*' ]
+   origin:['*','http://localhost:3000','https://mango-sky-000567500.5.azurestaticapps.net']//[ 'https://white-field-099b39e10.5.azurestaticapps.net', 'http://localhost:3000','*' ]
 };
 app.get('/', cors(corsOptions),
     (req, res) => {res.json('Hello from server');

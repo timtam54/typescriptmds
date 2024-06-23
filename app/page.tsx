@@ -14,7 +14,7 @@ export default function Home() {
    
     //const socket = io.connect("https://mdsexp.azurewebsites.net")//should be io.connect("https://mdsexpress.azurewebsites.net")
 
-const socket = io.connect("https://mdsexp.azurewebsites.net", {
+const socket = io.connect("https://mango-sky-000567500.5.azurestaticapps.net", {
   withCredentials: true,
   extraHeaders: {
     "Access-Control-Allow-Origin": "*"
