@@ -8,7 +8,7 @@ import { EventEmitterAsyncResource } from "stream";
 interface notrec {
     name:string;
     message:string;
-    type:string;
+    tpe:string;
 }
 export default function Home() {
    
@@ -39,7 +39,7 @@ const socket = io.connect("https://mdsexp.azurewebsites.net", {//https://mango-s
         socket.on('notification', (data:notrec) => {
             console.log(`Notification from server`);
              new Audio('./sound/message.mp3').play();
-             toast(data.name + ': '+ data.message + ' - '+data.type);
+             toast(data.name + ': '+ data.message + ' - '+data.tpe);
             setNotifications([...notifications, data])
         })
 
